@@ -1,0 +1,193 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ff; /* Brighter shade of primary color */
+}
+
+/* Scrollbar Styles for WebKit Browsers */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f2f3f8; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #191970; /* Color of the scrollbar thumb (primary color) */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #000080; /* Darker shade on hover */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px; /* Increased height */
+    background-color: #cceeff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #191970;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative; /* Required for the absolute positioning of the underline */
+}
+
+nav ul li a {
+    color: #191970;
+    text-decoration: none; /* Remove default underline */
+    font-weight: normal; /* Buy/Sell is regular weight */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a::after {
+    content: ""; /* Create an empty element for the underline */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Start from the left */
+    bottom: -2px; /* Position the underline below the text */
+    width: 100%; /* Full width of the link */
+    height: 2px; /* Thickness of the underline */
+    background-color: #000021; /* Color of the underline */
+    transform: scaleX(0); /* Start with the underline hidden */
+    transition: transform 0.3s ease; /* Smooth transition for the underline */
+}
+
+nav ul li a:hover {
+    color: #000021; /* Change text color on hover */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Show the underline on hover */
+}
+
+/* Slideshow Container Styles */
+#slideshow-container {
+    width: 100%;
+    max-width: 800px; /* Optional max width */
+    margin: 30px auto; /* Centering the container */
+    border: 5px solid rgba(25, 25, 112, 0.5); /* Primary color border with opacity */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; /* Ensures images do not overflow */
+}
+
+/* Slideshow Styles */
+#slideshow {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* Slideshow Text Styles */
+#slideshow-text {
+    text-align: center; /* Centering text */
+    margin: 20px auto; /* Adding margin for spacing */
+    color: #191970; /* Primary color */
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+}
+
+/* Section Styles */
+.section {
+    padding: 40px;
+    background-color: white; /* Slightly brighter than body background */
+    color: #191970;
+    border-radius: 10px; /* Adding border radius for better aesthetics */
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px; /* Maximum width for the content */
+    margin: 0 auto; /* Centering the container */
+    margin-bottom: 30px;
+    padding: 0 20px; /* Adding padding on left and right */
+}
+
+.section h2 {
+    color: #191970;
+    font-size: 28px;
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #191970; /* Primary color */
+    opacity: 0.5; /* Less opacity for a softer look */
+    margin: 20px 0; /* Space above and below the line */
+}
+
+/* Up Arrow Styles */
+.up-arrow {
+    position: fixed;
+    bottom: 20px; /* Adjust the position as needed */
+    right: 20px; /* Adjust the position as needed */
+    background-color: #191970; /* Match header background */
+    color: white;
+    border-radius: 50%;
+    width: 40px; /* Size of the circle */
+    height: 40px; /* Size of the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+    transition: background-color 0.3s;
+}
+
+.up-arrow:hover {
+    background-color: #00008b; /* Darker shade on hover */
+}
+
+p{
+    color: #333;
+}
+
+/* Header Styles Adjustments */
+header {
+    transition: top 0.3s; /* Smooth transition for the header */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}

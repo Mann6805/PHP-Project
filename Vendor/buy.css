@@ -1,0 +1,113 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    z-index: 10;
+    transition: transform 0.3s;
+}
+
+.back-arrow img {
+    width: 40px;
+    height: 40px;
+}
+
+.back-arrow:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #191970;
+}
+
+.SectionThree{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.request-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    /* Remove transition for height, to keep containers expanded */
+    height: auto; /* No longer collapsed */
+}
+
+.request-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.scrap-type {
+    font-size: 1em;
+    color: #555;
+    margin-right: 5px;
+}
+
+.seller-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Removed toggle button styles since it's no longer needed */
+.request-details {
+    margin-top: 20px;
+    opacity: 1; /* Keep the details visible always */
+    overflow: hidden;
+    /* Removed transition for opacity, so no fade effect */
+}
+
+.accept-button, .reach-button {
+    background-color: #191970;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.accept-button:hover, .reach-button:hover {
+    background-color: #00008b;
+}
+
+.amount {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}

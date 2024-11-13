@@ -1,0 +1,115 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    z-index: 10;
+    transition: transform 0.3s;
+}
+
+.back-arrow:hover {
+    transform: scale(1.1);
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Info Section */
+.profile-info h2 {
+    font-size: 1.8em;
+    color: #191970;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 1em;
+    margin: 8px 0;
+}
+
+/* Input Fields */
+.profile-info input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Buttons */
+.edit-button, .logout-button,.save-button {
+    background-color: #191970;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none; /* Removes underline for link */
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover, .save-button:hover, .logout-button:hover {
+    background-color: #00008b;
+}
+
+/* Divider */
+.divider {
+    margin: 20px 0;
+    border: none;
+    border-top: 2px solid #ddd;
+}
+
+/* Statistics Section */
+.statistics h2 {
+    font-size: 1.8em;
+    color: #191970;
+    margin-bottom: 10px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.stat-item strong {
+    color: #191970;
+}
+
+/* Adjustments for Readability */
+p {
+    line-height: 1.5;
+}
